@@ -26,10 +26,12 @@ import org.junit.Before
 import org.junit.Test
 
 import static org.eclipse.xtext.ui.testing.util.IResourcesSetupUtil.*
+import org.junit.Ignore
 
 /**
  * @author Jan Koehnlein - Initial contribution and API
  */
+ @Ignore
 class DirtyStateEditorSupportIntegrationTest extends AbstractEditorTest {
 	
 	@Inject extension SyncUtil syncUtil

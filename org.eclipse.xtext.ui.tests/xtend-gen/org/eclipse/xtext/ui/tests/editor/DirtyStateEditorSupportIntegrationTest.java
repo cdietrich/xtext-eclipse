@@ -38,11 +38,13 @@ import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
  * @author Jan Koehnlein - Initial contribution and API
  */
+@Ignore
 @SuppressWarnings("all")
 public class DirtyStateEditorSupportIntegrationTest extends AbstractEditorTest {
   @Inject
