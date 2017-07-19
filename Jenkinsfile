@@ -16,6 +16,7 @@ node {
 		def mvnHome = tool 'M3'
 		try {
 			wrap([$class:'Xvnc', useXauthority: true]) {
+				sh "git clean -fdx"
 				sh "${mvnHome}/bin/mvn --batch-mode -fae -Dmaven.test.failure.ignore=true -Dmaven.repo.local=.m2/repository clean install"
 			}
 		} finally {
