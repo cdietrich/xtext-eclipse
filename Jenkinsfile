@@ -16,7 +16,7 @@ node {
 		def mvnHome = tool 'M3'
 		try {
 			wrap([$class:'Xvnc', useXauthority: true]) {
-				sh "git clean -fdx && ${mvnHome}/bin/mvn --batch-mode -fae -Dmaven.test.failure.ignore=true -Dmaven.repo.local=.m2/repository clean install"
+				sh "${mvnHome}/bin/mvn --batch-mode -fae -Dmaven.test.failure.ignore=true -Dmaven.repo.local=.m2/repository clean install"
 			}
 		} finally {
 			step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/*.xml'])
