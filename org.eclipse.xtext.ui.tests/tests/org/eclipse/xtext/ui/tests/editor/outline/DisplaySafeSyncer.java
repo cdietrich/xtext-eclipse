@@ -44,5 +44,7 @@ public class DisplaySafeSyncer {
 	public void signal() {
 		if (latch != null)
 			latch.countDown();
+		else
+			latch = new CountDownLatch(0);
 	}
 }
