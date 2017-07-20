@@ -16,7 +16,7 @@ cache:
 install: true
 
 before_install:
- - echo "MAVEN_OPTS='-Xmx2048m -XX:MaxPermSize=512m'" > ~/.mavenrc
+ - echo "MAVEN_OPTS='-Xmx512m'" > ~/.mavenrc
  - echo $JAVA_HOME
 
 before_script:
